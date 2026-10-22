@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vivek Kumar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightgreen;
+        }
+
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .skill {
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            transition:0.3s;
+        }
+        
+        .skill:hover{
+            transform:scale(1.05);
+            background-color:lightblue;
+        }
+
+        button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor:pointer;
+            transition:0.3s;}
+            
+            button:hover{
+                background-color:blue;
+                transform:scale(1.05);
+            }
+        
+            nav{
+            margin-top:15px;
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:10px;
+            font-size:18px ;
+        }
+        }
+        @media (max-width:600px;) {
+            header h1{
+            font-size:30px;
+        }
+        nav a{
+            display:block;
+            margin:8px;
+        }
+        section{
+            padding:20px;
+        }
+        }
+        input, textarea {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 12px auto;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#result {
+    color: green;
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Vivek Kumar</h1>
+        <p>Web Developer</p>
+        <nav>
+            <a href="#about">About</a>
+            <<a href="# skills">Skills</a>
+            <a href ="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input
+            type="text"
+            id:"username"
+            placeholder="Enter your name"
+            required>
+            
+            <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required>
+            
+            <textarea
+            id="message"
+            placeholder="Write your message"
+            required
+            ></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <p id="result"></p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+    </section>
+
+    <section id="contact>
+        <h2>Contact</h2>
+        <button>Contact Me</button>
+    </section>
+    <script>
+    document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("username").value;
+
+            document.getElementById("result").innerHTML =
+                "Thank you, " + name + "! Your form is working.";
+
+        });
+</script>
+
+</body>
+      </html>
